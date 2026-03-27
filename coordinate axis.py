@@ -8,10 +8,12 @@ plt.figure()
 plt.plot(x, y, linewidth=1.5)
 plt.xlabel("xxxx")
 plt.ylabel("yyyy")
-plt.xlim((-4, 5))
+plt.xlim((-1, 4))
 plt.ylim((-20, 70))
 
 ticks = np.arange(-1, 4, 0.5)
 plt.xticks(ticks)
 
+ax = plt.gca()
+ax.spines["bottom"].set_position(("data", -1))
 plt.show()
